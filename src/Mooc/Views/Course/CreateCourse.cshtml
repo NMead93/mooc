@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Mooc.ViewModels.CourseViewModel
+
+<h1>Create Course</h1>
+
+@using (Html.BeginForm("CreateCourse", "Course", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.Course.Name)
+    @Html.TextBoxFor(m => m.Course.Name)
+
+    @Html.LabelFor(m => m.Course.Description)
+    @Html.TextBoxFor(m => m.Course.Description)
+
+    @Html.LabelFor(m => m.Subject.Name)
+    @Html.TextBoxFor(m => m.Subject.Name)
+
+    <input type="submit" value="Create Course" />
+
+}
